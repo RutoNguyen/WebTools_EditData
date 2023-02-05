@@ -1,0 +1,48 @@
+﻿body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.card {
+    margin-block-start: 2rem;
+    /*scroll-margin-block-start:10px;*/
+}
+footer {
+    margin-top: auto;
+}
+.row{
+    margin-bottom:10px;
+}
+/*.form-floating{
+    margin-bottom:10px;
+}*/
+.form-check{
+    font-size:20px;
+}
+.input-group-prepend{
+    width:auto;
+}
+.input-group-prepend span {
+    /*width: 80px;*/
+    width: 100px;
+    background-color: #FFC312;
+    color: black;
+    border: 0 !important;
+/*    text-align:center;*/
+}
+/*.form-group{
+    text-align:center;
+}*/
+/*input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+}*/
+
+.my-custom-scrollbar {
+    position: relative;
+    height: auto;
+    overflow: auto;
+}
+.table-wrapper-scroll-y {
+    display: block;
+}

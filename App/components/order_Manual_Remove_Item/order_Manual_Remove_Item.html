@@ -1,0 +1,184 @@
+﻿
+<div class="container-fluid" ng-controller="orderManualRemoveItemCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-3" style="border-radius: 2rem;">
+                    <div class="card-header text-center font-weight-bold display-4">
+                        Order Change Address
+                    </div>
+                    <div class="card-body">
+                        <form class="mt-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="clubID">clubID</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="clubID" ng-model="orderManualRemoveItemObj.clubID" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="OrderID">OrderID</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="OrderID" ng-model="orderManualRemoveItemObj.OrderID" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Street1">Street1</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="Street1" ng-model="orderManualRemoveItemObj.Street1">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Street2">Street2</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="Street2" ng-model="orderManualRemoveItemObj.Street2" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Suburb">Suburb</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="Suburb" ng-model="orderManualRemoveItemObj.Suburb" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="State">State</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="State" ng-model="orderManualRemoveItemObj.State">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="PostCode">PostCode</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="PostCode" ng-model="orderManualRemoveItemObj.PostCode" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Country">Country</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="Country" ng-model="orderManualRemoveItemObj.Country" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="CompanyName">Company</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="CompanyName" ng-model="orderManualRemoveItemObj.CompanyName">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Phone">Phone</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="Phone" ng-model="orderManualRemoveItemObj.Phone" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Note">Note</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="Note" ng-model="orderManualRemoveItemObj.Note" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ml-1 mb-2">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input align-items-md-center" id="IsRun" ng-model="orderManualRemoveItemObj.IsRun" />
+                                        <label class="form-check-label" for="IsRun"> IsRun </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary col-md-auto" ng-click="onOrderManualRemoveSubmit()">Order Manual Remove Submit</button>
+                        </form>
+
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div class="table-responsive-md">
+                        <table class="table table-success table-striped-columns table-hover table-bordered w-auto mx-md-auto" ng-show="viewData.length">
+                            <thead>
+                                <tr class="table-warning">
+                                    <td>OrderId</td>
+                                    <td>UploadID</td>
+                                    <td>Status</td>
+                                    <td>StatusNotes</td>
+                                    <td>TPF_notes</td>
+                                    <td>RecordID</td>
+                                    <td>Street1</td>
+                                    <td>Street2</td>
+                                    <td>Suburb</td>
+                                    <td>State</td>
+                                    <td>Postcode</td>
+                                    <td>Country</td>
+                                    <td>CompanyName</td>
+                                    <td>DPID</td>
+                                    <td>BSPNumber</td>
+                                    <td>BSPState</td>
+                                    <td>CourierMethodID</td>
+                                    <td>Phone</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="d in viewData">
+                                    <td>{{d.OrderId}}</td>
+                                    <td>{{d.UploadID}}</td>
+                                    <td>{{d.Status}}</td>
+                                    <td>{{d.StatusNotes}}</td>
+                                    <td>{{d.TPF_notes}}</td>
+                                    <td>{{d.RecordID}}</td>
+                                    <td>{{d.Street1}}</td>
+                                    <td>{{d.Street2}}</td>
+                                    <td>{{d.Suburb}}</td>
+                                    <td>{{d.State}}</td>
+                                    <td>{{d.Postcode}}</td>
+                                    <td>{{d.Country}}</td>
+                                    <td>{{d.CompanyName}}</td>
+                                    <td>{{d.DPID}}</td>
+                                    <td>{{d.BSPNumber}}</td>
+                                    <td>{{d.BSPState}}</td>
+                                    <td>{{d.CourierMethodID}}</td>
+                                    <td>{{d.Phone}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

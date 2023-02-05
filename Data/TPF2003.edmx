@@ -1,0 +1,229 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="Tpf2003Model.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="staffID" />
+          </Key>
+          <Property Name="staffID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="fname" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="lname" Type="nvarchar" MaxLength="30" />
+          <Property Name="username" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="password" Type="nvarchar" MaxLength="20" Nullable="false" />
+          <Property Name="psentence" Type="nvarchar" MaxLength="50" />
+          <Property Name="DOB" Type="varchar" MaxLength="15" />
+          <Property Name="address" Type="nvarchar" MaxLength="200" />
+          <Property Name="suburb" Type="nvarchar" MaxLength="200" />
+          <Property Name="postcode" Type="varchar" MaxLength="25" />
+          <Property Name="state" Type="nvarchar" MaxLength="50" />
+          <Property Name="country" Type="varchar" MaxLength="20" />
+          <Property Name="companyphone" Type="bit" />
+          <Property Name="phoneNo" Type="varchar" MaxLength="30" />
+          <Property Name="mobNo" Type="varchar" MaxLength="30" />
+          <Property Name="hkNo" Type="varchar" MaxLength="50" />
+          <Property Name="extensionNo" Type="varchar" MaxLength="10" />
+          <Property Name="directNo" Type="varchar" MaxLength="25" />
+          <Property Name="faxNo" Type="nvarchar" MaxLength="25" />
+          <Property Name="email" Type="nvarchar" MaxLength="50" />
+          <Property Name="departID" Type="int" />
+          <Property Name="location" Type="nvarchar" MaxLength="30" />
+          <Property Name="startdate" Type="varchar" MaxLength="20" />
+          <Property Name="enddate" Type="varchar" MaxLength="20" />
+          <Property Name="staffposition" Type="nvarchar" MaxLength="150" />
+          <Property Name="sortcode" Type="varchar" MaxLength="5" />
+          <Property Name="salesNo" Type="varchar" MaxLength="5" />
+          <Property Name="BDCNo" Type="nvarchar" MaxLength="15" />
+          <Property Name="jobtype" Type="varchar" MaxLength="20" />
+          <Property Name="payrate" Type="real" />
+          <Property Name="signon" Type="varchar" MaxLength="5" />
+          <Property Name="kitchenduty" Type="varchar" MaxLength="5" />
+          <Property Name="jobdescription" Type="nvarchar" MaxLength="200" />
+          <Property Name="interest" Type="nvarchar" MaxLength="200" />
+          <Property Name="photo" Type="nvarchar" MaxLength="20" />
+          <Property Name="status" Type="nvarchar" MaxLength="15" />
+          <Property Name="psallocate" Type="nvarchar" MaxLength="20" />
+          <Property Name="quotpermission" Type="nvarchar" MaxLength="60" />
+          <Property Name="groupnumber" Type="int" />
+          <Property Name="plGroupID" Type="int" />
+          <Property Name="contactperson" Type="nvarchar" MaxLength="50" />
+          <Property Name="contactphone" Type="nvarchar" MaxLength="20" />
+          <Property Name="alapproval" Type="int" />
+          <Property Name="manager" Type="nvarchar" MaxLength="50" />
+          <Property Name="almngr" Type="nvarchar" MaxLength="50" />
+          <Property Name="alaccrued" Type="nvarchar" MaxLength="8" />
+          <Property Name="stafflisting" Type="nvarchar" MaxLength="8" />
+          <Property Name="companyid" Type="int" />
+          <Property Name="skype" Type="nvarchar" MaxLength="50" />
+          <Property Name="admin" Type="int" />
+          <Property Name="roll" Type="nvarchar" MaxLength="150" />
+          <Property Name="StartDateLSL" Type="datetime" />
+          <Property Name="passCode" Type="nvarchar" MaxLength="36" />
+          <Property Name="passCodeAccess" Type="bit" />
+          <Property Name="isStationLoginAccount" Type="bit" />
+        </EntityType>
+        <EntityContainer Name="Tpf2003ModelStoreContainer">
+          <EntitySet Name="staff" EntityType="Self.staff" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="Tpf2003Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="staff">
+          <Key>
+            <PropertyRef Name="staffID" />
+          </Key>
+          <Property Name="staffID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="fname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="lname" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="username" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="20" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="psentence" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="DOB" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="suburb" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="postcode" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="state" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="country" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="companyphone" Type="Boolean" />
+          <Property Name="phoneNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="mobNo" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="hkNo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="extensionNo" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="directNo" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="faxNo" Type="String" MaxLength="25" FixedLength="false" Unicode="true" />
+          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="departID" Type="Int32" />
+          <Property Name="location" Type="String" MaxLength="30" FixedLength="false" Unicode="true" />
+          <Property Name="startdate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="enddate" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="staffposition" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="sortcode" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="salesNo" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="BDCNo" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="jobtype" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="payrate" Type="Single" />
+          <Property Name="signon" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="kitchenduty" Type="String" MaxLength="5" FixedLength="false" Unicode="false" />
+          <Property Name="jobdescription" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="interest" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="photo" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="status" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+          <Property Name="psallocate" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="quotpermission" Type="String" MaxLength="60" FixedLength="false" Unicode="true" />
+          <Property Name="groupnumber" Type="Int32" />
+          <Property Name="plGroupID" Type="Int32" />
+          <Property Name="contactperson" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="contactphone" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="alapproval" Type="Int32" />
+          <Property Name="manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="almngr" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="alaccrued" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="stafflisting" Type="String" MaxLength="8" FixedLength="false" Unicode="true" />
+          <Property Name="companyid" Type="Int32" />
+          <Property Name="skype" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="admin" Type="Int32" />
+          <Property Name="roll" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="StartDateLSL" Type="DateTime" Precision="3" />
+          <Property Name="passCode" Type="String" MaxLength="36" FixedLength="false" Unicode="true" />
+          <Property Name="passCodeAccess" Type="Boolean" />
+          <Property Name="isStationLoginAccount" Type="Boolean" />
+        </EntityType>
+        <EntityContainer Name="Tpf2003Entities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="staffs" EntityType="Self.staff" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="Tpf2003ModelStoreContainer" CdmEntityContainer="Tpf2003Entities">
+          <EntitySetMapping Name="staffs">
+            <EntityTypeMapping TypeName="Tpf2003Model.staff">
+              <MappingFragment StoreEntitySet="staff">
+                <ScalarProperty Name="staffID" ColumnName="staffID" />
+                <ScalarProperty Name="fname" ColumnName="fname" />
+                <ScalarProperty Name="lname" ColumnName="lname" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="psentence" ColumnName="psentence" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="suburb" ColumnName="suburb" />
+                <ScalarProperty Name="postcode" ColumnName="postcode" />
+                <ScalarProperty Name="state" ColumnName="state" />
+                <ScalarProperty Name="country" ColumnName="country" />
+                <ScalarProperty Name="companyphone" ColumnName="companyphone" />
+                <ScalarProperty Name="phoneNo" ColumnName="phoneNo" />
+                <ScalarProperty Name="mobNo" ColumnName="mobNo" />
+                <ScalarProperty Name="hkNo" ColumnName="hkNo" />
+                <ScalarProperty Name="extensionNo" ColumnName="extensionNo" />
+                <ScalarProperty Name="directNo" ColumnName="directNo" />
+                <ScalarProperty Name="faxNo" ColumnName="faxNo" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="departID" ColumnName="departID" />
+                <ScalarProperty Name="location" ColumnName="location" />
+                <ScalarProperty Name="startdate" ColumnName="startdate" />
+                <ScalarProperty Name="enddate" ColumnName="enddate" />
+                <ScalarProperty Name="staffposition" ColumnName="staffposition" />
+                <ScalarProperty Name="sortcode" ColumnName="sortcode" />
+                <ScalarProperty Name="salesNo" ColumnName="salesNo" />
+                <ScalarProperty Name="BDCNo" ColumnName="BDCNo" />
+                <ScalarProperty Name="jobtype" ColumnName="jobtype" />
+                <ScalarProperty Name="payrate" ColumnName="payrate" />
+                <ScalarProperty Name="signon" ColumnName="signon" />
+                <ScalarProperty Name="kitchenduty" ColumnName="kitchenduty" />
+                <ScalarProperty Name="jobdescription" ColumnName="jobdescription" />
+                <ScalarProperty Name="interest" ColumnName="interest" />
+                <ScalarProperty Name="photo" ColumnName="photo" />
+                <ScalarProperty Name="status" ColumnName="status" />
+                <ScalarProperty Name="psallocate" ColumnName="psallocate" />
+                <ScalarProperty Name="quotpermission" ColumnName="quotpermission" />
+                <ScalarProperty Name="groupnumber" ColumnName="groupnumber" />
+                <ScalarProperty Name="plGroupID" ColumnName="plGroupID" />
+                <ScalarProperty Name="contactperson" ColumnName="contactperson" />
+                <ScalarProperty Name="contactphone" ColumnName="contactphone" />
+                <ScalarProperty Name="alapproval" ColumnName="alapproval" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="almngr" ColumnName="almngr" />
+                <ScalarProperty Name="alaccrued" ColumnName="alaccrued" />
+                <ScalarProperty Name="stafflisting" ColumnName="stafflisting" />
+                <ScalarProperty Name="companyid" ColumnName="companyid" />
+                <ScalarProperty Name="skype" ColumnName="skype" />
+                <ScalarProperty Name="admin" ColumnName="admin" />
+                <ScalarProperty Name="roll" ColumnName="roll" />
+                <ScalarProperty Name="StartDateLSL" ColumnName="StartDateLSL" />
+                <ScalarProperty Name="passCode" ColumnName="passCode" />
+                <ScalarProperty Name="passCodeAccess" ColumnName="passCodeAccess" />
+                <ScalarProperty Name="isStationLoginAccount" ColumnName="isStationLoginAccount" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

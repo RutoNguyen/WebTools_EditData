@@ -1,0 +1,376 @@
+﻿
+<div class="container" ng-controller="backOrderChangeReplaceItemCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3" style="border-radius: 2rem;">
+                <div class="card-header text-center font-weight-bold display-4">
+                    Back Order Change Replace Item
+                </div>
+                <div class="card-body">
+                    <form class="mt-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="ClubCode">ClubCode</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="ClubCode" ng-model="changeBackOrderReplaceItemObj.ClubCode" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="UploadID">UploadID</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="UploadID" ng-model="changeBackOrderReplaceItemObj.UploadID" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="GroupIDList">GroupIDList</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="GroupIDList" ng-model="changeBackOrderReplaceItemObj.GroupIDList">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="RecordIDList">RecordIDList</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-10" placeholder="RecordIDList" ng-model="changeBackOrderReplaceItemObj.RecordIDList" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="ItemType">Item Type</span>
+                                    </div>
+                                    <div class="form-control col-md-8">
+                                        <select name="cars" class="form-control text-md-center" ng-model="changeBackOrderReplaceItemObj.ItemType">
+                                            <option value="" selected>Select Item Type</option>
+                                            <option value="Product">Product</option>
+                                            <option value="Letter">Letter</option>
+                                            <option value="Card">Card</option>
+                                            <option value="Envelope">Envelope</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="FromItemID">FromItemID</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="FromItemID" ng-model="changeBackOrderReplaceItemObj.FromItemID">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="ToItemID">ToItemID</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="ToItemID" ng-model="changeBackOrderReplaceItemObj.ToItemID" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="Note">Note</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="Note" ng-model="changeBackOrderReplaceItemObj.Note" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-1 mb-2">
+                            <div class="col-md-2">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input align-items-md-center" id="IsRun" ng-model="changeBackOrderReplaceItemObj.IsRun" />
+                                    <label class="form-check-label" for="IsRun"> IsRun </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary col-md-auto" ng-click="onchangeBackOrderReplaceItemSubmit()">Change Back Order Replace Item</button>
+                    </form>
+
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+            <div class="table-responsive-md">
+                <table class="table table-success table-striped-columns table-hover table-bordered" ng-repeat="d in viewData">
+                    <thead>
+                        <tr class="table-warning">
+                            <td>TPF_notes</td>
+                            <td>RecordID</td>
+                            <td>GroupID</td>
+                            <td>MemberID</td>
+                            <td>PackType</td>
+                            <td>CardTypeFace</td>
+                            <td>LetterType</td>
+                            <td>EnvelopeType</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{d.TPF_notes}}</td>
+                            <td>{{d.RecordID}}</td>
+                            <td>{{d.GroupID}}</td>
+                            <td>{{d.MemberID}}</td>
+                            <td>{{d.PackType}}</td>
+                            <td>{{d.CardTypeFace}}</td>
+                            <td>{{d.LetterType}}</td>
+                            <td>{{d.EnvelopeType}}</td>
+                            <td>{{d.Status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--<h2 class="card-title text-md-center">Back Order Change Replace Item</h2>
+
+<div class="container-fluid" ng-controller="backOrderChangeReplaceItemCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <form action="" class="main-form" novalidate>
+                <div class="row">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="ClubCode">ClubCode</label>
+                            <input type="text" name="ClubCode" id="ClubCode" class="form-control" ng-model="changeBackOrderReplaceItemObj.ClubCode">-->
+<!-- <div class="invalid-feedback">this is code club!</div> -->
+<!--</div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="UploadID">UploadID</label>
+        <input type="text" name="UploadID" id="UploadID" class="form-control" ng-model="changeBackOrderReplaceItemObj.UploadID">-->
+<!-- <small class="form-text text-muted">
+    This should be your UploadID.
+</small> -->
+<!--</div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="GroupIDList">GroupIDList</label>
+        <input type="text" name="GroupIDList" id="GroupIDList" class="form-control" ng-model="changeBackOrderReplaceItemObj.GroupIDList">-->
+<!-- <small class="form-text text-muted">
+    This should be your UploadID.
+</small> -->
+<!--</div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="RecordIDList">RecordIDList</label>
+        <input type="text" name="RecordIDList" id="RecordIDList" class="form-control" ng-model="changeBackOrderReplaceItemObj.RecordIDList">-->
+<!-- <div class="invalid-feedback">this is code club!</div> -->
+<!--</div>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <div class="form-group">
+            <label for="ItemType">ItemType</label>
+            <select name="ItemType" id="ItemType" class="form-control" ng-model="changeBackOrderReplaceItemObj.ItemType">
+                <option value="">--Please choose an option--</option>
+                <option value="Product">Product</option>
+                <option value="Letter">Letter</option>
+                <option value="Card">Card</option>
+                <option value="Envelope">Envelope</option>
+            </select>-->
+<!-- <input type="text" name="UploadID" id="UploadID" class="form-control" ng-model="changeOrderAddressObj.Suburb"> -->
+<!-- <small class="form-text text-muted">
+    This should be your UploadID.
+</small> -->
+<!--</div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="FromItemID">FromItemID</label>
+        <input type="text" name="FromItemID" id="FromItemID" class="form-control" ng-model="changeBackOrderReplaceItemObj.FromItemID">-->
+<!-- <small class="form-text text-muted">
+    This should be your UploadID.
+</small> -->
+<!--</div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="ToItemID">ToItemID</label>
+        <input type="text" name="ToItemID" id="ToItemID" class="form-control" ng-model="changeBackOrderReplaceItemObj.ToItemID">-->
+<!-- <small class="form-text text-muted">
+    This should be your UploadID.
+</small> -->
+<!--</div>
+</div>
+<div class="col">
+    <div class="form-group">
+        <label for="Note">Note</label>
+        <input type="text" name="Note" id="Note" class="form-control" ng-model="changeBackOrderReplaceItemObj.Note">-->
+<!-- <div class="invalid-feedback">this is code club!</div> -->
+<!--</div>
+    </div>
+</div>
+<div class="form-group">
+    <label for="IsRun">IsRun</label>
+    <input type="checkbox" name="IsRun" id="IsRun" class="input-control" ng-model="changeBackOrderReplaceItemObj.IsRun">
+</div>-->
+<!-- <div class="form-group">
+    <label for="gender">Gender</label>
+    <select name="gender" id="gender" class="form-control">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+    </select>
+</div> -->
+<!-- <div class="form-check">
+    <input type="checkbox" id="accept-terms" class="form-check-input">
+    <label for="accept-terms" class="form-check-label">Accept Terms &amp; Conditions</label>
+</div> -->
+<!--<button type="button" class="btn btn-primary" ng-click="onchangeBackOrderReplaceItemSubmit()">Change Back Order Replace Item</button>
+            </form>
+        </div>
+    </div>
+
+</div>-->
+<!--<div class="container" ng-controller="backOrderChangeReplaceItemCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-header text-center font-weight-bold display-4">
+                    Back Order Change Replace Item
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Form</h5>
+                    <form class="needs-validation" novalidate>
+                        <div class="input-group">
+                            <div class="form-floating">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="ClubCode" id="ClubCode" class="form-control" placeholder="ClubCode" ng-model="changeBackOrderReplaceItemObj.ClubCode">
+                                            <label for="ClubCode">ClubCode</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="UploadID" id="UploadID" class="form-control" placeholder="UploadID" ng-model="changeBackOrderReplaceItemObj.UploadID">
+                                            <label for="UploadID">UploadID</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" name="GroupIDList" id="GroupIDList" class="form-control" placeholder="GroupIDList" ng-model="changeBackOrderReplaceItemObj.GroupIDList">
+                                            <label for="GroupIDList">GroupIDList</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="RecordIDList" id="RecordIDList" class="form-control" placeholder="RecordIDList" ng-model="changeBackOrderReplaceItemObj.RecordIDList">
+                                            <label for="RecordIDList">RecordIDList</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-select">
+                                            <select name="cars" class="form-control" ng-model="changeBackOrderReplaceItemObj.ItemType">
+                                                <option value="" selected>Open this select menu</option>
+                                                <option value="Product">Product</option>
+                                                <option value="Letter">Letter</option>
+                                                <option value="Card">Card</option>
+                                                <option value="Envelope">Envelope</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="FromItemID" id="FromItemID" class="form-control" placeholder="FromItemID" ng-model="changeBackOrderReplaceItemObj.FromItemID">
+                                            <label for="FromItemID">FromItemID</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="ToItemID" id="ToItemID" class="form-control" placeholder="ToItemID" ng-model="changeBackOrderReplaceItemObj.ToItemID">
+                                            <label for="ToItemID">ToItemID</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="Note" id="Note" class="form-control" placeholder="Note" ng-model="changeBackOrderReplaceItemObj.Note">
+                                            <label for="Note">Note</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mb-2">
+                                    <div class="col-md-2">
+                                        <div class="form-check">
+                                            <label class="form-check-label text-center" for="flexCheckDefault">
+                                                IsRun
+                                            </label>
+                                            <input class="form-check-input text-center" type="checkbox" value="" id="flexCheckDefault" ng-model="changeBackOrderReplaceItemObj.IsRun">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary col-md-auto" ng-click="onchangeBackOrderReplaceItemSubmit()">Change Back Order Replace Item</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+            <div class="table-responsive-md">
+                <table class="table table-success table-striped-columns table-hover table-bordered" ng-repeat="d in viewData">
+                    <thead>
+                        <tr class="table-warning">
+                            <td>TPF_notes</td>
+                            <td>RecordID</td>
+                            <td>GroupID</td>
+                            <td>MemberID</td>
+                            <td>PackType</td>
+                            <td>CardTypeFace</td>
+                            <td>LetterType</td>
+                            <td>EnvelopeType</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{d.TPF_notes}}</td>
+                            <td>{{d.RecordID}}</td>
+                            <td>{{d.GroupID}}</td>
+                            <td>{{d.MemberID}}</td>
+                            <td>{{d.PackType}}</td>
+                            <td>{{d.CardTypeFace}}</td>
+                            <td>{{d.LetterType}}</td>
+                            <td>{{d.EnvelopeType}}</td>
+                            <td>{{d.Status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>-->
+
+
+
+<!--<div class="row ml-md-1">
+    <div class="col-md-2">
+        <div class="input-group-prepend cols-md-4 text-md-center">
+            <span class="input-group-text" id="RecordIDList">RecordIDList</span>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <input type="text" class="form-control col-md-8" placeholder="RecordIDList" ng-model="changeBackOrderReplaceItemObj.RecordIDList" />
+    </div>
+</div>-->

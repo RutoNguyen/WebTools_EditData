@@ -1,0 +1,105 @@
+﻿
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" ng-controller="homeCtrl">
+    <div class="container">
+        <a class="navbar-brand" href="#">TPF Tools</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Order
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" ui-sref="home.order_Change_Address">Change Order Address</a>
+                        <a class="dropdown-item" href="#!/home/order_Change_Envelope">Change Order Envelope</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" role="button" data-toggle="dropdown" aria-expanded="false">
+                        Back Order
+                    </a>
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="#!/home/backOrder_Change_Address">Change Back Order Address</a>
+                        <a class="dropdown-item" href="#!/home/backOrder_Change_ReplaceItem">Change Back Order Replace Item</a>
+                        <a class="dropdown-item" href="#!/home/backOrder_Add_Item">Back Order Add Item</a>
+                        <a class="dropdown-item" href="#!/home/backOrder_Remove_Item">Back Order Remove Item</a>
+                        <div class="dropdown-divider"></div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="btn btn-primary me-md-2">
+                        <span style="font-weight:bold;">Hi,{{user}}</span>
+                        <span>&nbsp; | &nbsp;</span>
+                        <span class="pointer" ng-click="Logout()">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<ui-view></ui-view>
+
+
+
+<!--<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top" ng-controller="homeCtrl">
+    <div class="container">
+        <a class="navbar-brand mb-0 h1" href="#!">TPF Tools</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Order
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" ui-sref="home.order_Change_Address">Change Order Address</a></li>
+                        <li><a class="dropdown-item" href="#!/home/order_Change_Address">Change Order Address</a></li>
+                        <li class="dropdown-sub">
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Back Order
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" ui-sref="home.backOrder_Change_Address">Change Back Order Address</a></li>
+                        <li><a class="dropdown-item" href="#!/home/backOrder_Change_Address">Change Back Order Address</a></li>
+                        <li><a class="dropdown-item" href="#!/home/backOrder_Change_ReplaceItem">Change Back Order Replace Item</a></li>
+                        <li><a class="dropdown-item" href="#!/home/backOrder_Add_Item">Back Order Add Item</a></li>
+                        <li><a class="dropdown-item" href="#!/home/backOrder_Remove_Item">Back Order Remove Item</a></li>
+                        <li class="dropdown-sub">
+                            <hr class="dropdown-divider">
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a class="btn btn-primary me-md-2" href="#!loginPage">Login</a>
+                </li>
+                <li>
+                    <a class="btn btn-primary me-md-2">
+                        <span style="font-weight:bold;">Hi,{{user}}</span>
+                        <span>&nbsp;|&nbsp;</span>
+                        <span class="pointer" ng-click="Logout()">Logout</span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>-->

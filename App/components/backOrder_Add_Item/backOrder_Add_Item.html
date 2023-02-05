@@ -1,0 +1,245 @@
+﻿
+<div class="container" ng-controller="backOrderAddItemCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3" style="border-radius: 2rem;">
+                <div class="card-header text-center font-weight-bold display-4">
+                    Back Order Add Item
+                </div>
+                <div class="card-body">
+                    <form class="mt-3">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="ClubCode">ClubCode</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="ClubCode" ng-model="changeBackOrderAddItemObj.ClubCode" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="UploadID">UploadID</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="UploadID" ng-model="changeBackOrderAddItemObj.UploadID" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="GroupIDList">GroupIDList</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="GroupIDList" ng-model="changeBackOrderAddItemObj.GroupIDList">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-8">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="RecordIDList">RecordIDList</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-10" placeholder="RecordIDList" ng-model="changeBackOrderAddItemObj.RecordIDList" />
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="ItemType">Item Type</span>
+                                    </div>
+                                    <div class="form-control col-md-8">
+                                        <select name="cars" class="form-control text-md-center" ng-model="changeBackOrderAddItemObj.ItemType">
+                                            <option value="" selected>Select Item Type</option>
+                                            <option value="Product">Product</option>
+                                            <option value="Letter">Letter</option>
+                                            <option value="Card">Card</option>
+                                            <option value="Envelope">Envelope</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="ItemID">ItemID</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="ItemID" ng-model="changeBackOrderAddItemObj.ItemID">
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group row ml-md-1">
+                                    <div class="input-group-prepend cols-md-4">
+                                        <span class="input-group-text" id="Note">Note</span>
+                                    </div>
+                                    <input type="text" class="form-control col-md-8" placeholder="Note" ng-model="changeBackOrderAddItemObj.Note" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row ml-1 mb-2">
+                            <div class="col-md-2">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input align-items-md-center" id="IsRun" ng-model="changeBackOrderAddItemObj.IsRun" />
+                                    <label class="form-check-label" for="IsRun"> IsRun </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <button type="button" class="btn btn-primary col-md-auto" ng-click="onchangeBackOderAddItemSubmit()">Change Back Order Add Item</button>
+                    </form>
+
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+            <div class="table-responsive-md">
+                <table class="table table-success table-striped-columns table-hover table-bordered" ng-repeat="d in viewData">
+                    <thead>
+                        <tr class="table-warning">
+                            <td>TPF_notes</td>
+                            <td>RecordID</td>
+                            <td>GroupID</td>
+                            <td>MemberID</td>
+                            <td>PackType</td>
+                            <td>CardTypeFace</td>
+                            <td>LetterType</td>
+                            <td>EnvelopeType</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{d.TPF_notes}}</td>
+                            <td>{{d.RecordID}}</td>
+                            <td>{{d.GroupID}}</td>
+                            <td>{{d.MemberID}}</td>
+                            <td>{{d.PackType}}</td>
+                            <td>{{d.CardTypeFace}}</td>
+                            <td>{{d.LetterType}}</td>
+                            <td>{{d.EnvelopeType}}</td>
+                            <td>{{d.Status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="container" ng-controller="backOrderAddItemCtrl">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card mb-3">
+                <div class="card-header text-center font-weight-bold display-4">
+                    Back Order Add Item
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">Form</h5>
+                    <form class="needs-validation" novalidate>
+                        <div class="input-group">
+                            <div class="form-floating" novalidate>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="ClubCode" id="ClubCode" class="form-control" placeholder="ClubCode" ng-model="changeBackOrderAddItemObj.ClubCode">
+                                            <label for="ClubCode">ClubCode</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="UploadID" id="UploadID" class="form-control" placeholder="UploadID" ng-model="changeBackOrderAddItemObj.UploadID">
+                                            <label for="UploadID">UploadID</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" name="GroupIDList" id="GroupIDList" class="form-control" placeholder="GroupIDList" ng-model="changeBackOrderAddItemObj.GroupIDList">
+                                            <label for="GroupIDList">GroupIDList</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="RecordIDList" id="RecordIDList" class="form-control" placeholder="RecordIDList" ng-model="changeBackOrderAddItemObj.RecordIDList">
+                                            <label for="RecordIDList">RecordIDList</label>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <div class="form-select">
+                                            <select name="cars" class="form-control" ng-model="changeBackOrderAddItemObj.ItemType">
+                                                <option value="" selected>Open this select menu</option>
+                                                <option value="Product">Product</option>
+                                                <option value="Letter">Letter</option>
+                                                <option value="Card">Card</option>
+                                                <option value="Envelope">Envelope</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="ItemID" id="ItemID" class="form-control" placeholder="ItemID" ng-model="changeBackOrderAddItemObj.ItemID">
+                                            <label for="ItemID">ItemID</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <div class="form-floating">
+                                            <input type="text" required name="Note" id="Note" class="form-control" placeholder="Note" ng-model="changeBackOrderAddItemObj.Note">
+                                            <label for="Note">Note</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row ml-1 mb-2">
+                                    <div class="col-md-2">
+                                        <div class="form-check">
+                                            <input type="checkbox" class="form-check-input align-items-md-center" id="IsRun" ng-model="changeBackOrderAddItemObj.IsRun" />
+                                            <label class="form-check-label" for="IsRun"> IsRun </label>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary col-md-auto" ng-click="onchangeBackOderAddItemSubmit()">Change Back Order Add Item</button>
+                    </form>
+                </div>
+                <div class="card-footer">
+                </div>
+            </div>
+            <div class="table-responsive-md">
+                <table class="table table-success table-striped-columns table-hover table-bordered" ng-repeat="d in viewData">
+                    <thead>
+                        <tr class="table-warning">
+                            <td>TPF_notes</td>
+                            <td>RecordID</td>
+                            <td>GroupID</td>
+                            <td>MemberID</td>
+                            <td>PackType</td>
+                            <td>CardTypeFace</td>
+                            <td>LetterType</td>
+                            <td>EnvelopeType</td>
+                            <td>Status</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>{{d.TPF_notes}}</td>
+                            <td>{{d.RecordID}}</td>
+                            <td>{{d.GroupID}}</td>
+                            <td>{{d.MemberID}}</td>
+                            <td>{{d.PackType}}</td>
+                            <td>{{d.CardTypeFace}}</td>
+                            <td>{{d.LetterType}}</td>
+                            <td>{{d.EnvelopeType}}</td>
+                            <td>{{d.Status}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>-->
+

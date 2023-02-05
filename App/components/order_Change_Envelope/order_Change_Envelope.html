@@ -1,0 +1,127 @@
+﻿
+<div class="container-fluid" ng-controller="orderChangeEnvelopeCtrl">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card mb-3" style="border-radius: 2rem;">
+                    <div class="card-header text-center font-weight-bold display-4">
+                        Order Change Envelope
+                    </div>
+                    <div class="card-body">
+                        <form class="mt-3">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="ClubCode">ClubCode</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="ClubCode" ng-model="changeOrderEnvelopeObj.ClubCode" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="OrderID">OrderID</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="OrderID" ng-model="changeOrderEnvelopeObj.OrderID" />
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="FromEnvelopeID">From</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="FromEnvelopeID" ng-model="changeOrderEnvelopeObj.FromEnvelopeID">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="ToEnvelopeID">To</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-8" placeholder="ToEnvelopeID" ng-model="changeOrderEnvelopeObj.ToEnvelopeID" />
+                                    </div>
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="form-group row ml-md-1">
+                                        <div class="input-group-prepend cols-md-4">
+                                            <span class="input-group-text" id="Note">Note</span>
+                                        </div>
+                                        <input type="text" class="form-control col-md-10" placeholder="Note" ng-model="changeOrderEnvelopeObj.Note" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row ml-1 mb-2">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input align-items-md-center" id="IsAllowFullyDelivered" ng-model="changeOrderEnvelopeObj.IsAllowFullyDelivered" />
+                                        <label class="form-check-label" for="IsAllowFullyDelivered"> IsAllowFullyDelivered </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row ml-1 mb-2">
+                                <div class="col-md-2">
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input align-items-md-center" id="IsRun" ng-model="changeOrderEnvelopeObj.IsRun" />
+                                        <label class="form-check-label" for="IsRun"> IsRun </label>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-primary col-md-auto" ng-click="onChangeOrderEnvelopeSubmit()">Change Order Envelope</button>
+                        </form>
+
+                    </div>
+                    <div class="card-footer">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="table-wrapper-scroll-y my-custom-scrollbar">
+                    <div class="table-responsive-md">
+                        <table class="table table-success table-striped-columns table-hover table-bordered w-auto mx-md-auto" ng-show="viewData.length">
+                            <thead>
+                                <tr class="table-warning">
+                                    <td>ClubID</td>
+                                    <td>OrderId</td>
+                                    <td>ProductionStatus</td>
+                                    <td>EnvelopeType</td>
+                                    <td>TPF_notes</td>
+                                    <td>LabelID</td>
+                                    <td>OrderDetailCode</td>
+                                    <td>Status</td>
+                                    <td>LabelStatus</td>
+                                    <td>CourierMethodID</td>
+                                    <td>CourierTrackingNo</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="d in viewData">
+                                    <td>{{d.ClubID}}</td>
+                                    <td>{{d.OrderId}}</td>
+                                    <td>{{d.ProductionStatus}}</td>
+                                    <td>{{d.EnvelopeType}}</td>
+                                    <td>{{d.TPF_notes}}</td>
+                                    <td>{{d.LabelID}}</td>
+                                    <td>{{d.OrderDetailCode}}</td>
+                                    <td>{{d.Status}}</td>
+                                    <td>{{d.LabelStatus}}</td>
+                                    <td>{{d.CourierMethodID}}</td>
+                                    <td>{{d.CourierTrackingNo}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
